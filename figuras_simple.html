@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas</title>
+    <link rel="stylesheet" href="figuras_simple.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+
+        <h2>Geometry calculator</h2>
+    
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'square')" id="btab-square">Square</button>
+            <button class="tablinks" onclick="openTab(event, 'triangle')" id="btab-triangle">Triangle</button>
+            <button class="tablinks" onclick="openTab(event, 'circle')" id="btab-circle">Circle</button>
+        </div>
+    
+        <div id="square" class="tabcontent">
+            <label for="side">Side: </label>
+            <input type="text" name="side" id="side">
+
+            <label for="perimeter">Perimeter: </label>
+            <input type="text" name="perimeter" id="perimeter" readonly>
+
+            <label for="area">Area: </label>
+            <input type="text" name="area" id="area" readonly>
+
+            <button class="btn-calculate" onclick="getSquareInfo()">
+                Calculate
+            </button>
+        </div>
+    
+        <div id="triangle" class="tabcontent">
+            <label for="side-one">Side 1: </label>
+            <input type="text" name="side-one" id="side-one">
+            
+            <label for="side-two">Side 2: </label>
+            <input type="text" name="side-two" id="side-two">
+
+            <label for="side-three">Side 3: </label>
+            <input type="text" name="side-three" id="side-three">
+
+            <label for="triangle-perimeter">Perimeter: </label>
+            <input type="text" name="triangle-perimeter" id="triangle-perimeter" readonly>
+
+            <label for="triangle-area">Area: </label>
+            <input type="text" name="triangle-area" id="triangle-area" readonly>
+
+            <button class="btn-calculate" onclick="getTriangleInfo()">
+                Calculate
+            </button>
+        </div>
+    
+        <div id="circle" class="tabcontent">
+            <label for="radius">Radius: </label>
+            <input type="text" name="radius" id="radius">
+
+            <label for="circle-perimeter">Perimeter: </label>
+            <input type="text" name="circle-perimeter" id="circle-perimeter" readonly>
+
+            <label for="circle-area">Area: </label>
+            <input type="text" name="circle-area" id="circle-area" readonly>
+
+            <button class="btn-calculate" onclick="getCircleInfo()">
+                Calculate
+            </button>
+        </div>
+
+    </main>
+    
+    <script src="figuras_simple.js"></script>
+
+</body>
+</html>
